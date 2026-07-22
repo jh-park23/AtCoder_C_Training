@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    int A, B, C, D, S1, S2;
+
+    scanf("%d %d %d %d", &A, &B, &C, &D);
+
+    S1 = A*B;
+    S2 = C*D;
+   
+    
+    if(S1>=S2)
+    {
+        printf("%d", S1);
+    }
+    else if(S2>S1)
+    {
+        printf("%d", S2);
+    }
+
+    return 0;
+}
