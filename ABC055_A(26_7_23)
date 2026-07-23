@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+    int e_x=800, x, e_y=200, y, N, total;
+
+    scanf("%d", &N);
+
+    x=e_x*N;
+    y=(N/15)*e_y;
+
+    total=x-y;
+
+    printf("%d", total);
+
+    return 0;
+}
