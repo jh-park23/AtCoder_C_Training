@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int main()
+{
+    char a,b;
+
+    scanf("%c %c", &a, &b);
+
+    if(a=='H')
+    {
+        if(b=='H')
+        {
+            printf("H");
+        }
+        else if(b=='D')
+        {
+            printf("D");
+        }
+    }
+    else if(a=='D')
+    {
+        if(b=='H')
+        {
+            printf("D");
+        }
+        else if(b=='D')
+        {
+            printf("H");
+        }
+    }
+    return 0;
+}
