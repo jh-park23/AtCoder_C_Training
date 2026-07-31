@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main()
+{
+    int n, m, block_num;
+    scanf("%d %d", &n, &m);
+
+    block_num=(n-1)*(m-1);
+
+    printf("%d", block_num);
+
+    return 0;
+}
