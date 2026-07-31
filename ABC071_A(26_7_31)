@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main()
+{
+    int x, a, b, s, t;
+    scanf("%d %d %d", &x, &a, &b);
+    s=abs(x-a);
+    t=abs(x-b);
+
+    if(s<=t)
+    {
+        printf("A");
+    }
+    else if(s>=t)
+    {
+        printf("B");
+    }
+
+    return 0;
+
+}
