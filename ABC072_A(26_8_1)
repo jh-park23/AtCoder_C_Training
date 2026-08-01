@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+    int X, t;
+    scanf("%d %d", &X, &t);
+
+    if(X-t>0)
+    {
+        printf("%d", X-t);
+    }
+    else
+    {
+        printf("%d", 0);
+    }
+
+    return 0;
+}
