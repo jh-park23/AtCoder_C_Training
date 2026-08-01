@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main()
+{
+    int N, A, black;
+    scanf("%d %d", &N, &A);
+
+    black = N*N-A;
+
+    printf("%d", black);
+
+    return 0;
+}
