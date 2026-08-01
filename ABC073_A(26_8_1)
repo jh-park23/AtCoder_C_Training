@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+    int N, ten_mutiple, one_mutiple;
+    scanf("%d", &N);
+
+    ten_mutiple = N/10;
+    one_mutiple = N-10*(N/10);
+
+    if(ten_mutiple==9 || one_mutiple==9)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+
+    return 0;
+}
