@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main()
+{
+    int R, G;
+    scanf("%d %d", &R, &G);
+    signed int X;
+
+    X= (2*G) - R;
+    printf("%d", X);
+
+    return 0;
+
+}
