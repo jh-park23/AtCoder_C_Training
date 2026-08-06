@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    float a, b, x;
+    int result;
+    scanf("%f %f", &a, &b);
+
+    x=(a+b)/2;
+    result= (int)round(x);
+
+    printf("%d", result);
+
+    return 0;
+}
