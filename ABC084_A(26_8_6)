@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main()
+{
+    int M, remain;
+    scanf("%d", &M);
+
+    remain = (24-M)+24;
+
+    printf("%d", remain);
+
+    return 0;
+}
