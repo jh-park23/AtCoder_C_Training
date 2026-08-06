@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+    int A, B, C, D, L, R;
+    scanf("%d %d %d %d", &A, &B, &C, &D);
+
+    L=A+B;
+    R=C+D;
+
+    if(L>R)
+    {
+        printf("Left");
+    }
+    else if(L==R)
+    {
+        printf("Balanced");
+    }
+    else
+    {
+        printf("Right");
+    }
+
+    return 0;
+}
