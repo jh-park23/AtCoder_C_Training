@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+    int X, A, B, X_donuts, num_donuts, remain;
+    scanf("%d %d %d", &X, &A, &B);
+
+    X_donuts = X - A;
+    num_donuts = X_donuts/B;
+    remain = X_donuts - B*(num_donuts);
+
+    printf("%d", remain);
+
+    return 0;
+}
