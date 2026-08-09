@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+    int N, A, num_500, num_1;
+    scanf("%d %d", &N, &A);
+
+    num_500 = N/500;
+    num_1 = N%500;
+
+    if(num_1 <= A)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+
+    return 0;
+}
