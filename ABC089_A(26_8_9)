@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main()
+{
+    int N, count = 0;
+    scanf("%d", &N);
+
+    printf("%d", N/3);
+
+    return 0;
+}
