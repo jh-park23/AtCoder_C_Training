@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main()
+{
+    int A, B, C, D, optimal_train, optimal_bus, optimal;
+    scanf("%d %d %d %d", &A, &B, &C, &D);
+
+    if(A>=B)
+    {
+        optimal_train = B;
+    }
+    else if(B>A)
+    {
+        optimal_train = A;
+    }
+
+    if(C>=D)
+    {
+        optimal_bus = D;
+    }
+    else if(D>C)
+    {
+        optimal_bus = C;
+    }
+
+    optimal = optimal_train + optimal_bus;
+
+    printf("%d", optimal);
+
+    return 0;
+}
