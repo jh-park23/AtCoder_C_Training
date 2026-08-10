@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+int main()
+{
+    char S[4];
+    scanf("%s", S);
+    int find_a=0, find_b=0, find_c=0;
+
+    for(int i = 0; i<3; i++)
+    {
+        if(S[i]=='a')
+        {
+            find_a++;
+        }
+        else if(S[i]=='b')
+        {
+            find_b++;
+        }
+        else if(S[i]=='c')
+        {
+            find_c++;
+        }
+    }
+
+    if(find_a==1&&find_b==1&&find_c==1)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+
+    return 0;
+}
