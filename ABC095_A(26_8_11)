@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main()
+{
+    char S[4];
+    scanf("%s", S);
+    int count = 0;
+
+    for(int i = 0; i < 3; i++)
+    {
+        if(S[i]=='o')
+        {
+            count++;
+        }
+        else
+        {
+            continue;
+        }
+    }
+
+    printf("%d", 700+count*100);
+
+    return 0;
+}
