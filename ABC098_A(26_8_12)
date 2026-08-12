@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int A,B;
+    scanf("%d %d", &A, &B);
+
+    int p, m, mul;
+    p = A+B;
+    m = A-B;
+    mul = A*B;
+
+    if(p>=m&&p>=mul)
+    {
+        printf("%d", p);
+    }
+    else if(m>p&&m>mul)
+    {
+        printf("%d", m);
+    }
+    else if(mul>p&&mul>m)
+    {
+        printf("%d", mul);
+    }
+    
+    return 0;
+}
