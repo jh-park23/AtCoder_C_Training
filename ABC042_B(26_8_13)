@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int compare(const void *a, const void *b)
+{
+    return strcmp((char *)a, (char *)b);
+}
+
+int main()
+{
+    int N,L;
+    char S[100][101];
+    scanf("%d %d", &N, &L);
+
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%s", S[i]);
+    }
+
+    qsort(S, N, sizeof(S[0]), compare);
+    
+    for(int i = 0; i < N; i++)
+    {
+        printf("%s", S[i]);
+    }
+
+    return 0;
+}
