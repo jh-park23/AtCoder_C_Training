@@ -1,0 +1,47 @@
+#include<stdio.h>
+char result[11];
+
+char * make_result(char *S)
+{
+    int id = 0; 
+    for(int i = 0; S[i] != '\0'; i++)
+    {
+        if(S[i]=='0')
+        {
+            result[id] = '0';
+            id++; 
+        }
+        else if(S[i]=='1')
+        {
+            result[id] = '1';
+            id++;
+        }
+        else if(S[i]=='B')
+        {
+            if(id==0)
+            {
+                continue;
+            }
+            else
+            {
+                id--;
+            }
+        }
+
+        
+    }
+    result[id] = '\0';
+    return (char *)result;
+}
+
+int main()
+{
+    char S[11];
+    scanf("%s", S);
+
+    make_result(S);
+
+    printf("%s", result);
+
+    return 0;
+}
