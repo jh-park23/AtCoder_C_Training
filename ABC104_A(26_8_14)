@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+
+char* name_contest(int *R)
+{
+    if(*R< 1200)
+    {
+        return "ABC";
+    }
+    else if(*R>=1200 && *R<2800)
+    {
+        return "ARC";
+    }
+    else
+    {
+        return "AGC";
+    }
+}
+
+int main()
+{
+    int R;
+    scanf("%d", &R);
+
+    char *S = name_contest(&R);
+    printf("%s", S);
+
+    return 0;
+}
