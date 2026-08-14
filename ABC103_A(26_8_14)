@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int big, mid, small;
+int find_sort (const int *a, const int *b, const int *c)
+{
+    big = *a;
+    mid = *b;
+    small = *c;
+
+    if(*a>=*b && *a>=*c && *b>=*c)
+    {
+        big = *a;
+        mid = *b;
+        small = *c;
+    }
+    else if(*a>=*b && *a>=*c && *c>=*b)
+    {
+        big = *a;
+        mid = *c;
+        small = *b;
+    }
+    else if(*b>=*a && *b>=*c && *a>=*c)
+    {
+        big = *b;
+        mid = *a;
+        small = *c;
+    }
+    else if(*b>=*a && *b>=*c && *c>=*a)
+    {
+        big = *b;
+        mid = *c;
+        small = *a;
+    }
+    else if(*c>=*a && *c>=*b && *a>=*b)
+    {
+        big = *c;
+        mid = *a;
+        small = *b;
+    }
+    else if(*c>=*a && *c>=*b && *b>=*a)
+    {
+        big = *c;
+        mid = *b;
+        small = *a;
+    }
+
+}
+
+int main()
+{
+    int A1, A2, A3;
+    scanf("%d %d %d", &A1, &A2, &A3);
+
+    find_sort(&A1, &A2, &A3);
+
+    printf("%d", (mid-small)+(big-mid));
+
+    return 0;    
+}
