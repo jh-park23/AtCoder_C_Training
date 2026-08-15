@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int AREA(const int *a, const int *b)
+{
+    int area;
+
+    area = (*a-1) * (*b-1);
+
+    return area;
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    printf("%d", AREA(&A, &B));
+
+    return 0;
+}
