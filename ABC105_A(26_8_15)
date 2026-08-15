@@ -21,6 +21,6 @@ int main()
     scanf("%d %d", &N, &K);
 
     printf("%d", differnece(&N, &K));
-
+ 
     return 0;
 }
