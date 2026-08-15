@@ -1,0 +1,26 @@
+#include<stdio.h>
+int gap;
+
+int differnece (const int *A, const int *B)
+{
+    if(*A%*B != 0)
+    {
+        gap = 1;
+    }
+    else
+    {
+        gap = 0;
+    }
+
+    return gap;
+}
+
+int main()
+{
+    int N, K;
+    scanf("%d %d", &N, &K);
+
+    printf("%d", differnece(&N, &K));
+
+    return 0;
+}
