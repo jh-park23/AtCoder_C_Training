@@ -1,0 +1,45 @@
+#include<stdio.h>
+
+void count(const char * w, int *letter)
+{
+    int i = 0, index;
+    
+    for(i; w[i] !='\0'; i++)
+    {
+        index = w[i]-'a';
+        letter[index] ++;
+    }
+
+    return;
+}
+
+int main()
+{
+    char w[101];
+    int letter[26]={0};
+    int NO = 0;
+    scanf("%s", w);
+
+    count(w, letter);
+
+    for(int i = 0; i < 26; i ++)
+    {
+        if(letter[i]%2 == 1)
+        {
+            NO = 1;
+            break;
+        }
+        else;
+    }
+
+    if(NO == 0)
+    {
+        printf("Yes");
+    }
+    else if(NO == 1)
+    {
+        printf("No");
+    }
+
+    return 0;
+}
