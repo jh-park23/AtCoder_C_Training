@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int find_pairs(const int *K)
+{
+    int pairs;
+    if((*K%2)==1)
+    {
+        return pairs = ((*K+1)/2)*(((*K+1)/2)-1);
+    }
+    else
+    {
+        return pairs = (*K/2)*(*K/2);
+    }
+}
+
+
+int main()
+{
+   int K;
+   scanf("%d", &K);
+
+    printf("%d", find_pairs(&K));
+
+    return 0;
+}
