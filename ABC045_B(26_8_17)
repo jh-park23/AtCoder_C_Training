@@ -1,0 +1,57 @@
+#include<stdio.h>
+
+char play_game(char *a, char *b, char *c)
+{
+    char letter = 'a';
+    int idA = 0, idB = 0, idC = 0;
+    
+    while(1)
+    {
+        if(letter == 'a')
+        {
+            if(a[idA] != '\0')
+            {
+                letter = a[idA];
+                idA++; 
+            }
+            else if(a[idA] == '\0')
+            {
+                return 'A';
+            }
+        }
+        else if(letter == 'b')
+        {
+            if(b[idB] != '\0')
+            {
+                letter = b[idB];
+                idB++;
+            }
+            else if(b[idB] == '\0')
+            {
+                return 'B';
+            }
+        }
+        else if(letter == 'c')
+        {
+            if(c[idC] != '\0')
+            {
+                letter = c[idC];
+                idC++;
+            }
+            else if(c[idC] == '\0')
+            {
+                return 'C';
+            }
+        }
+    }
+}
+
+int main()
+{
+    char SA[101], SB[101], SC[101];
+    scanf("%s %s %s", SA, SB, SC);
+
+    printf("%c", play_game(SA, SB,SC));
+
+    return 0;
+}
