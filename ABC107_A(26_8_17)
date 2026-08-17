@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int front_back(const int *N, const int * i)
+{
+    int back_num = *N-*i+1;
+    return back_num;
+}
+
+int main()
+{
+    int N, i;
+    scanf("%d %d", &N, &i);
+
+    printf("%d", front_back(&N, &i));
+
+    return 0;
+}
