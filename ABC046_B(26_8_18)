@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+
+long long num_ways(const int *a, const int *b)
+{
+    return *b * pow(*b-1, *a-1);
+}
+
+int main()
+{
+    int N, K;
+    scanf("%d %d", &N, &K);
+
+    printf("%lld", num_ways(&N, &K));
+
+    return 0;
+}
