@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int multi_odd(const int *a, const int *b)
+{
+    if(*a%2 == 1 && *b%2 == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    if(multi_odd(&A, &B)==0)
+    {
+        printf("No");
+    }
+    else if(multi_odd(&A,&B)==1)
+    {
+        printf("Yes");
+    }
+
+    return 0;
+}
