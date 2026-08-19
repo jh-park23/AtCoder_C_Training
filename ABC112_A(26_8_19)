@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+
+void how_old(const int *a, int *A, int *B)
+{
+    if(*a==1)
+    {
+        printf("Hello World");
+    }
+    else if(*a==2)
+    {
+        scanf("%d %d", A, B);
+        printf("%d", *A + *B);
+    }
+}
+
+int main()
+{
+    int N, A, B;
+    scanf("%d", &N);
+
+    how_old(&N, &A, &B);
+
+    return 0;
+}
