@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int year_old(const int *a)
+{
+    if(*a == 7 || *a == 5 || *a == 3)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+    int X;
+    scanf("%d", &X);
+
+    if(year_old(&X) == 1)
+    {
+        printf("YES");
+    }
+    else
+    {
+        printf("NO");
+    }
+
+    return 0;
+}
