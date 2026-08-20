@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+long long count_divisible(const long long *a, const long long *b, const long long * c)
+{
+    long long small_num, big_num, count = 0;
+
+    if(*a != 0)
+    {
+        if(*a % *c == 0)
+        {
+            small_num = *a / *c;
+        }
+        else
+        {
+            small_num = (*a / *c) + 1;
+        }
+
+        big_num = *b / *c;
+    
+        count = big_num - small_num + 1;
+
+        return count;
+    }
+    else
+    {
+        small_num = 0;
+        big_num = *b / *c;
+
+        count = big_num - small_num +1;
+
+        return count;
+    }
+}
+
+int main()
+{
+    long long a, b, x;
+    scanf("%lld %lld %lld", &a, &b, &x);
+
+    printf("%lld", count_divisible(&a, &b, &x));
+
+    return 0;
+}
