@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int AtoC(const int *a, const int *b)
+{
+    return *a + (*b/2);
+}
+
+int main()
+{
+    int A,B;
+    scanf("%d %d", &A, &B);
+
+    printf("%d", AtoC(&A, &B));
+
+    return 0;
+}
