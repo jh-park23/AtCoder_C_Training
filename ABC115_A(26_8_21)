@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int Eve(const int * a)
+{
+    int count;
+    count = 25 - *a;
+
+    return count;
+}
+
+int main()
+{
+    int D;
+    scanf("%d", &D);
+
+    printf("Christmas");
+
+    for(int i = 0; i < Eve(&D); i++)
+    {
+        printf(" Eve");
+    }
+
+    return 0;
+}
