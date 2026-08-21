@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int AREA(const int * a, const int * b, const int * c)
+{
+    if((*a)*(*a) == ((*b)*(*b) + (*c)*(*c)))
+    {
+        return (*b * *c) / 2;
+    }
+    else if((*b)*(*b) == ((*a)*(*a) + (*c)*(*c)))
+    {
+        return (*a * *c) / 2;
+    }
+    else if((*c)*(*c) == ((*a)*(*a) + (*b)*(*b)))
+    {
+        return (*a * *b) / 2;
+    }
+    else return 0;
+}
+int main()
+{
+    int AB, BC, CA;
+    scanf("%d %d %d", &AB, &BC, &CA);
+
+    printf("%d", AREA(&AB, &BC, &CA));
+
+    return 0;
+}
