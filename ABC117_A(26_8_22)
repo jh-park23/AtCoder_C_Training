@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+double time_pass(const int *a, const int *b, double *c)
+{
+    return *c = (double)*a / *b;
+}
+int main()
+{
+    int T, X;
+    double need_hour;
+
+    scanf("%d %d", &T, &X);
+
+    printf("%lf", time_pass(&T, &X, &need_hour));
+
+    return 0;
+}
