@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int find_pairs(const int *a, const int *b)
+{
+    int count = 0;
+    for(int i = 0; i <= *a; i++)
+    {
+        for(int j = 0; j <= *a; j++)
+        {
+            int Z = *b - i -j; 
+            if(Z >= 0 && Z <= *a)
+            {
+                count++;
+            }
+            else;
+        }
+    }
+    return count;
+}
+
+int main()
+{
+    int K,S;
+    scanf("%d %d", &K, &S);
+
+    printf("%d", find_pairs(&K, &S));
+
+    return 0;
+}
