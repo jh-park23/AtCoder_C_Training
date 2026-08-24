@@ -1,23 +1,26 @@
 #include<stdio.h>
 
-void compare(const int * S)
+void compare(const int * a, const int *b, const int *c)
 {
-    if()
+    if(*a>2019||(*a==2019 && *b>=5))
+    {
+        printf("TBD");
+    }
+    else
+    {
+        printf("Heisei");
+    }
 }
 
 int main()
 {
-    int S[11];
-    for(int i = 0; i < 10; i++)
-    {
-        scanf("%d", S[i]);
-    }
-
-    int year, month, day;
-
-    year = S[0]
-
-
+    char S[11];
+    scanf("%s", S);
     
+    int year, month, day;
+    sscanf(S, "%4d/%2d/%2d", &year, &month, &day);
 
+    compare(&year, &month, &day);
+
+    return 0;
 }
