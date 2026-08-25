@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int total_num(const int *a, const char *b)
+{
+    int total = 0, biggest = 0;
+
+    for(int i = 0; i < *a; i++)
+    {
+        if(b[i] == 'I')
+        {
+            total++;
+            if(total > biggest)
+            {
+                biggest = total;
+            }
+            else;
+        }
+        else if(b[i] == 'D')
+        {
+            total--;
+        }
+        else;
+    }
+    
+    if(biggest > 0)
+    {
+        return biggest;
+    }
+    else return 0;
+}
+
+int main()
+{
+    int N;
+    char S[101];
+    scanf("%d", &N);
+    scanf("%s", S);
+
+    printf("%d", total_num(&N, S));
+    
+    return 0;
+}
