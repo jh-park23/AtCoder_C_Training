@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int count_string(const char *S)
+{
+    int count, first_A = -1, last_Z=-1, i = 0;
+
+    for(i; S[i] !='\0'; i++)
+    {
+        if(S[i] == 'A')
+        {
+            if(first_A < 0)
+            {
+                first_A = i;
+            }
+            else; 
+        }
+        else if(S[i] == 'Z')
+        {
+            if(i >= last_Z)
+            {
+                last_Z = i;
+            }
+            else;
+        }
+        else;
+    }
+
+    return last_Z - first_A + 1;
+}
+
+int main()
+{
+    char S[200001];
+    scanf("%s", S);
+
+    printf("%d", count_string(S));
+
+    return 0;
+}
