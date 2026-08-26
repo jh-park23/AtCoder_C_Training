@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int largest_coin(int *a, int *b)
+{
+    int largest = 0;
+
+    for(int i = 0; i < 2; i++)
+    {
+        if(*a>=*b)
+        {
+            largest += *a;
+            (*a)--;
+        }
+        else
+        {
+            largest += *b;
+            (*b)--;   
+        }
+    }
+
+    return largest;
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    printf("%d\n", largest_coin(&A, &B));
+
+    return 0;
+}
