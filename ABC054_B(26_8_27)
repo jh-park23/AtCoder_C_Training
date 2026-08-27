@@ -1,0 +1,62 @@
+#include<stdio.h>
+
+int check_contained(const int *a, const int *b, const char c[][51], const char d[][51])
+{
+    for(int i = 0; i <= *a - *b; i++)
+    {
+        for(int j = 0; j <= *a - *b; j++)
+        {
+            if(c[i][j] == d[0][0])
+            {
+                int match = 1; // This row & colum is matched
+
+                for(int m = 0; m < *b; m++)
+                {
+                    for(int n = 0; n < *b; n++)
+                    {
+                       if(c[i + m][j + n] != d[m][n])
+                       {
+                            match = 0;
+                            goto fail;
+                       }
+                    }
+                }
+                fail: ;
+
+                if(match == 1)
+                {
+                    return 1;
+                }
+            }
+        }
+    }
+
+    return 0; //B is not contained
+}
+
+int main()
+{
+    int N, M;
+    char A[51][51], B[51][51];
+    
+    scanf("%d %d", &N, &M);
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%s", A[i]);
+    }
+    for(int i = 0; i < M; i++)
+    {
+        scanf("%s", B[i]);
+    }
+
+    if(check_contained(&N, &M, A, B) == 1)
+    {
+        printf("Yes\0");
+    }
+    else if(check_contained(&N, &M, A, B) == 0)
+    {
+        printf("No\0");
+    }
+
+    return 0;
+}
