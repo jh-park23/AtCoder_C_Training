@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<ctype.h>
+
+void kth_lowercasing(const int *b, char *c)
+{
+    char K_th = c[*b-1];
+    K_th = tolower(K_th);
+    c[*b-1] = K_th;
+    printf("%s\n", c);
+}
+
+int main()
+{
+    int N, K;
+    char S[51];
+
+    scanf("%d %d", &N, &K);
+    scanf("%s", S);
+
+    kth_lowercasing(&K, S);
+
+    return 0;
+}
