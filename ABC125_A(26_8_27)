@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int total_biscuit(const int *a, const int *b, const int *c)
+{
+    return (*c / *a) * *b;
+}
+
+int main()
+{
+    int A, B, T;
+    scanf("%d %d %d", &A, &B, &T);
+
+    printf("%d\n", total_biscuit(&A, &B, &T));
+
+    return 0;
+}
