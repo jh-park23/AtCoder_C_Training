@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void max_pie(const int *a, const int *b)
+{
+    int apple_to_pieces, total_pieces, max_num;
+    
+    if(*a != 0)
+    {
+        apple_to_pieces = *a * 3;
+    }
+    else apple_to_pieces = 0;
+    
+    total_pieces = apple_to_pieces + *b;
+    max_num = total_pieces / 2;
+
+    printf("%d\n", max_num);
+}
+
+int main()
+{
+    int A, P;
+    scanf("%d %d", &A, &P);
+
+    max_pie(&A, &P);
+
+    return 0;
+}
