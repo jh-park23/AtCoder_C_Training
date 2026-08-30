@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void compare(const int *a, const int *b)
+{
+    if(*a < *b)
+    {
+        printf("%d\n", 0);
+    }
+    else if(*b <= *a)
+    {
+        printf("%d\n", 10);
+    }
+}
+
+int main()
+{
+    int X, A;
+    scanf("%d %d", &X, &A);
+
+    compare(&X, &A);
+
+    return 0;
+}
