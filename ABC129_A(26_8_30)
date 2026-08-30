@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int total_time(const int *a, const int *b, const int *c)
+{
+    if(*a>=*b && *a>=*c)
+    {
+        return *b+*c;
+    }
+    else if(*b>=*a && *b>=*c)
+    {
+        return *a+*c;
+    }
+    else if(*c>=*a && *c>=*b)
+    {
+        return *a+*b;
+    }
+}
+
+int main()
+{
+    int P, Q, R;
+    scanf("%d %d %d", &P, &Q, &R);
+
+    printf("%d\n", total_time(&P, &Q, &R));
+
+    return 0;
+}
