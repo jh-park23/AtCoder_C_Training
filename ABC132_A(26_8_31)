@@ -1,0 +1,60 @@
+#include<stdio.h>
+
+int consist_two(const char *S)
+{
+    int num_char = 1, num1 = 1, num2 = 0;
+    char letter1 = S[0], letter2;
+
+    for(int i = 1; i < 4; i++)
+    {
+        if(letter1 == S[i])
+        {
+            num1++;
+        }
+        else if(letter1 != S[i])
+        {
+            if(num2 == 0)
+            {
+                num2++;
+                num_char++;
+                letter2 = S[i];
+            }
+            else if(num2 != 0)
+            {
+                if(letter2 == S[i])
+                {
+                    num2++;
+                }
+                else goto fail;
+            }
+        }
+    }
+
+    fail: ;
+
+    if(num_char == 2 && num1 == 2 && num2 ==2)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+    char S[5];
+    scanf("%s", S);
+
+    if(consist_two(S) == 1)
+    {
+        printf("Yes\n");
+    }
+    else if(consist_two(S) == 0)
+    {
+        printf("No\n");
+    }
+
+    return 0;
+}
