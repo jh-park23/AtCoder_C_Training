@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void min_dis(const long long *W, const long long *a, const long long *b)
+{
+    if((*a <= *b && *b <= *a + *W) || (*b <= *a && *a <= *b + *W))
+    {
+        printf("0\n");
+    }
+    else if(*b + *W < *a)
+    {
+        printf("%lld\n", *a - (*b + *W));
+    }
+    else if(*a + *W < *b)
+    {
+        printf("%lld\n", *b - (*a + *W));
+    }
+}
+
+int main()
+{
+    long long W, a, b;
+    scanf("%lld %lld %lld", &W, &a, &b);
+
+    min_dis(&W, &a, &b);
+
+    return 0;
+}
