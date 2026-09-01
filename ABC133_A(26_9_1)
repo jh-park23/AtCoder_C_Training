@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+void trip_ride(const int *a, const int *b, const int *c)
+{
+    if(*a * *b <= *c)
+    {
+        printf("%d\n", *a * *b);
+    }
+    else
+    {
+        printf("%d\n", *c);
+    }
+
+}
+
+int main()
+{
+    int N, A, B;
+    scanf("%d %d %d", &N, &A, &B);
+
+    trip_ride(&N, &A, &B);
+
+    return 0;
+}
