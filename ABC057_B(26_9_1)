@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+void small_dis(const int *a, const int *b, const long long S[][51], const long long C[][51])
+{
+    long long temp, smallest_index[51];
+
+    for(int i = 0; i < *a; i++)
+    {
+        long long smallest_dis = -1;
+        
+        for(int j = 0; j < *b; j++)
+        {    
+            temp = (llabs(S[i][0] - C[j][0]) + llabs(S[i][1] - C[j][1]));
+            
+            if(smallest_dis == -1 || temp < smallest_dis)
+            {
+                smallest_dis = temp;
+                smallest_index[i] = j + 1;
+            }
+        }
+    }
+
+    for(int i = 0; i < *a; i++)
+    {
+        printf("%lld\n", smallest_index[i]);
+    }
+}
+
+int main()
+{
+    int N, M;
+    scanf("%d %d",&N, &M);
+
+    long long S[51][51], C[51][51];
+
+    for(int i =0; i < N; i++)
+    {
+        scanf("%lld %lld", &S[i][0], &S[i][1]);
+    }
+    for(int i = 0; i < M; i++)
+    {
+        scanf("%lld %lld", &C[i][0], &C[i][1]);
+    }
+
+    small_dis(&N, &M, S, C);
+
+    return 0;
+}
