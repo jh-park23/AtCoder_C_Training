@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+
+void reorder(const char *O, const char *E, char *result)
+{
+    int i = 0, j = 0, z = 0;
+    for(i; O[i] != '\0'; i++)
+    {
+        result[z] = O[i];
+        z += 2; 
+    }
+    z = 1;
+    for(j; E[j] != '\0'; j++)
+    {
+        result[z] = E[j];
+        z += 2;
+    }
+    result[strlen(O) + strlen(E)] = '\0';
+
+    printf("%s\n", result);
+}
+
+int main()
+{
+    char O[51], E[51], result[102];
+    scanf("%s %s", O, E);
+
+    reorder(O, E, result);
+
+    return 0;
+}
