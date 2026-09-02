@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void find_mid(const long long *a, const long long *b)
+{
+    if((*a + *b) % 2 == 0)
+    {
+        printf("%lld\n", (*a + *b) / 2);
+    }
+    else
+    {
+        printf("IMPOSSIBLE");
+    }
+}
+
+int main()
+{
+    long long A, B;
+    scanf("%lld %lld", &A, &B);
+
+    find_mid(&A, &B);
+
+    return 0;
+}
