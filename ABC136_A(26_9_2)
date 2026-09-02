@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void move(const int *a, const int *b, const int *c)
+{
+    if(*a - *b < *c)
+    {
+        printf("%d\n", *c - (*a - *b));
+    }
+    else
+    {
+        printf("0\n");
+    }
+}
+
+int main()
+{
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+
+    move(&A, &B, &C);
+
+    return 0;
+}
