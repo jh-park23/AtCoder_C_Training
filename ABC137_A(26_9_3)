@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+void largest(const int *a, const int *b)
+{
+    int p = *a + *b, m = *a - *b, muti =  *a * *b;
+
+    if(p >= m && p >= muti)
+    {
+        printf("%d\n", p);
+    }
+    else if(m >= p && m >= muti)
+    {
+        printf("%d\n", m);
+    }
+    else if(muti >= p && muti >= m)
+    {
+        printf("%d\n", muti);
+    }
+
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    largest(&A, &B);
+
+    return 0;
+}
