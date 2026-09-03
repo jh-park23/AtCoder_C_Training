@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<string.h>
+
+void compare(const char *a, const char *b)
+{
+    int size_A = strlen(a), size_B = strlen(b);
+
+    if(size_A > size_B)
+    {
+        printf("GREATER\n");
+    }
+    else if(size_A < size_B)
+    {
+        printf("LESS\n");
+    }
+    else
+    {
+        int equal_compare = -1;
+
+        for(int i = 0; i < size_A; i++)
+        {
+            if(a[i] > b[i])
+            {
+                equal_compare = 0;
+                break;
+            }
+            else if(a[i] < b[i])
+            {
+                equal_compare = 1;
+                break;
+            }
+            else
+            {
+                equal_compare = 2;
+            }
+       }
+       
+
+        if(equal_compare ==0)
+        {
+            printf("GREATER\n");
+        }
+        else if(equal_compare == 1)
+        {
+            printf("LESS\n");
+        }
+        else if(equal_compare == 2)
+        {
+            printf("EQUAL\n");
+        }
+        
+    }
+}
+
+int main()
+{
+    char A[101], B[101];
+    scanf("%s %s", A, B);
+
+    compare(A, B);
+
+    return 0;
+}
