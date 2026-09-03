@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void print_array(const int *a, const char *S)
+{
+    if(*a >= 3200)
+    {
+        printf("%s\n", S);
+    }
+    else
+    {
+        printf("red\n");
+    }
+}
+
+int main()
+{
+    int a;
+    char S[11];
+
+    scanf("%d", &a);
+    scanf("%s", S);
+
+    print_array(&a, S);
+
+    return 0;
+}
