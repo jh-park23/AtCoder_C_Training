@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void count_correct(const char *S, const char *T)
+{
+    int correct_num = 0;
+
+    for(int i = 0; i < 3; i++)
+    {
+        if(S[i] == T[i])
+        {
+            correct_num++;
+        }
+    }
+
+    printf("%d\n", correct_num);
+}
+
+int main()
+{
+    char S[4], T[4];
+    scanf("%s %s", S, T);
+
+    count_correct(S, T);
+
+    return 0;
+}
