@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void predict_weather(const char *S)
+{
+    if(S[0] == 'S')
+    {
+        printf("Cloudy\n");
+    }
+    else if(S[0] == 'C')
+    {
+        printf("Rainy\n");
+    }
+    else if(S[0] == 'R')
+    {
+        printf("Sunny\n");
+    }
+}
+
+int main()
+{
+    char S[7];
+    scanf("%s", S);
+
+    predict_weather(S);
+
+    return 0;
+}
