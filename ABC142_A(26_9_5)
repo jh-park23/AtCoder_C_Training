@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void odd_probability(const int *a)
+{
+    int odd_num;
+
+    if(*a % 2 == 0)
+    {
+        odd_num = *a / 2;
+        printf("%lf", (double)odd_num / *a );
+    }
+    else
+    {
+        odd_num = (*a+1) / 2;
+        printf("%lf", (double)odd_num / *a);
+    }
+}
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    odd_probability(&N);
+
+    return 0;
+}
