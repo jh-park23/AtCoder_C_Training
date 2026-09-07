@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void can_calculate(const int *a, const int *b)
+{
+    if(*a > 9 || *b > 9)
+    {
+        printf("-1\n");
+    }
+    else
+    {
+        printf("%d\n", *a * *b);
+    }
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    can_calculate(&A, &B);
+
+    return 0;
+}
