@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void non_cover(const int *a, const int *b)
+{
+    if(2 * *b >= *a)
+    {
+        printf("0\n");
+    }
+    else
+    {
+        printf("%d\n", *a - (2 * *b));
+    }
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    non_cover(&A, &B);
+
+    return 0;
+}
