@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+void connected_road_num(const int *a, const int *b, const int R[][3])
+{
+    int idx, result[51] = {0};
+
+    for(int i = 0; i < *b; i++)
+    {
+        idx = R[i][0] - 1;
+        result[idx]++;
+        idx = R[i][1] - 1;
+        result[idx]++;
+    }
+
+    for(int i = 0; i < *a; i++)
+    {
+        printf("%d\n", result[i]);
+    }
+}
+
+int main()
+{
+    int N, M, R[51][3];
+    scanf("%d %d", &N, &M);
+
+    for(int i = 0; i < M; i++)
+    {
+        scanf("%d %d", &R[i][0], &R[i][1]);
+    }
+
+    connected_road_num(&N, &M, R);
+
+    return 0;
+}
