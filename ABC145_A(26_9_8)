@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+void muti_area(const int *a)
+{
+    printf("%d\n", (*a * *a));
+}
+
+int main()
+{
+    int r;
+    scanf("%d", &r);
+
+    muti_area(&r);
+
+    return 0;
+}
