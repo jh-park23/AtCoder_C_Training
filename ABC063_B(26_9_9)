@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+void check_varied(const char *S)
+{  
+    int non_varied = 0;
+    for(int i = 0; S[i] != '\0'; i++)
+    {
+        for(int j = i + 1; S[j] != '\0'; j++)
+        {
+            if(S[i] == S[j])
+            {
+                non_varied++;
+                break;
+            }
+        }
+    }
+
+    if(non_varied == 0)
+    {
+        printf("yes\n");
+    }
+    else printf("no\n");
+}
+
+int main()
+{
+    char S[27];
+    scanf("%s", S);
+
+    check_varied(S);
+
+    return 0;
+}
