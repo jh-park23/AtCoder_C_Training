@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+
+void day_count(const char *a)
+{
+    if(strcmp(a, "SUN") == 0)    
+    {
+        printf("7\n");
+    }
+    else if(strcmp(a, "MON") == 0)
+    {
+        printf("6\n");
+    }
+    else if(strcmp(a, "TUE") == 0)
+    {
+        printf("5\n");
+    }
+    else if(strcmp(a, "WED") == 0)
+    {
+        printf("4\n");
+    }
+    else if(strcmp(a, "THU") == 0)
+    {
+        printf("3\n");
+    }
+    else if(strcmp(a, "FRI") == 0)
+    {
+        printf("2\n");
+    }
+    else if(strcmp(a,"SAT") == 0)
+    {
+        printf("1\n");
+    }
+}
+
+int main()
+{
+    char S[4];
+    scanf("%s",S);
+
+    day_count(S);
+
+    return 0;
+}
