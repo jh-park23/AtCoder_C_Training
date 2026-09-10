@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void total_score(const int *a, const int *b, const int *c)
+{
+    if(*a + *b + *c >= 22)
+    {
+        printf("bust\n");
+    }
+    else
+    {
+        printf("win\n");
+    }
+}
+
+int main()
+{
+    int A1, A2, A3;
+    scanf("%d %d %d", &A1, &A2, &A3);
+
+    total_score(&A1, &A2, &A3);
+
+    return 0;
+}
