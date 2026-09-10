@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+void smallest_dis(const int *a, const int *s)
+{
+    int small = 1001, large = -1, dis;
+
+    for(int i = 0; i < *a; i++)
+    {
+        if(s[i] <= small)
+        {
+            small = s[i];
+        }
+    }
+    for(int i = 0; i < *a; i++)
+    {
+        if(s[i] >= large)
+        {
+            large = s[i];
+        }
+    }
+
+    dis = large - small;
+
+    printf("%d\n", dis);
+}
+
+int main()
+{
+    int N, coordinate[101];
+    scanf("%d", &N);
+
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &coordinate[i]);
+    }
+
+    smallest_dis(&N, coordinate);
+
+    return 0;
+}
