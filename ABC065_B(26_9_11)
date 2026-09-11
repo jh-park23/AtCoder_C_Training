@@ -1,0 +1,48 @@
+#include<stdio.h>
+
+void min_press(const long long *a, const int *s)
+{
+    long long idx = 0, count = 1;
+    int possible = 0;
+
+    for(long long i = 0; i < *a; i++)
+    {
+        if(s[idx] == 2)
+        {
+            possible = 1;
+            break;
+        }
+        else
+        {
+            idx = s[idx] - 1;
+            count++;
+        }
+        
+    }
+    
+    if(possible == 1)
+    {
+        printf("%lld\n", count);
+    }
+    else
+    {
+        printf("-1\n");
+    }
+}
+
+
+int main()
+{
+    long long N;
+    int a[100001];
+
+    scanf("%lld", &N);
+    for(long long i = 0; i < N; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    min_press(&N, a);
+
+    return 0;
+}
