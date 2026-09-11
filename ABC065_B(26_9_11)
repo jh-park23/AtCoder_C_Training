@@ -44,5 +44,5 @@ int main()
 
     min_press(&N, a);
 
-    return 0;
+    return 0; 
 }
