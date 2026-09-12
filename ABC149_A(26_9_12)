@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+
+void concatenating(const char *a, const char *b)
+{
+    char result[202];
+    strcpy(result, b);
+    strcat(result, a);
+
+    printf("%s\n", result);
+}
+
+int main()
+{
+    char S[101], T[101];
+    scanf("%s %s", S, T);
+
+    concatenating(S, T);
+
+    return 0;
+}
