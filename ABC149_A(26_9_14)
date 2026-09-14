@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void large_than(const int *a, const int *b)
+{
+    if(500 * *a >= *b)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
+}
+
+int main()
+{
+    int K, X;
+    scanf("%d %d", &K, &X);
+
+    large_than(&K, &X);
+
+    return  0;
+}
