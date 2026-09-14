@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+void make_max(const int *a, const int *b, int *l)
+{
+    int result[51], largest = -1, sum = 0;
+    
+    for(int j =0; j < *b; j++)
+    {
+        int idx;
+        for(int i = 0; i < *a; i++)
+        {
+            if(largest < l[i])
+            {
+                largest = l[i];
+                idx = i;
+            }
+        }
+
+        result[j] = largest;
+        l[idx] = 0;
+        largest = -1;
+    }
+
+    for(int i = 0; i < *b; i++)
+    {
+        sum += result[i];
+    }
+
+    printf("%d\n", sum);
+}
+
+int main()
+{
+    int N, K;
+    scanf("%d %d", &N, &K);
+
+    int l[51];
+
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &l[i]);
+    }
+
+    make_max(&N, &K, l);
+
+    return 0;
+}
