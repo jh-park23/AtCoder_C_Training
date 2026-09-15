@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+void most_divisible(const int N)
+{
+    int most_num = 1;
+    while(most_num * 2 <= N)
+    {
+        most_num *= 2; 
+    }
+
+    printf("%d\n", most_num);
+}
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    most_divisible(N);
+
+    return 0;
+}
