@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+void next_alpha(const char a)
+{
+    char next_order = a + 1;
+    printf("%c\n", next_order);
+}
+
+int main()
+{
+    char C;
+    scanf("%c", &C);
+
+    next_alpha(C);
+
+    return 0;
+}
