@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+void attack(const int H, const int A)
+{
+    int count = 0;
+    while(H - (A * count) > 0)
+    {
+        count++;
+    }
+
+    printf("%d\n", count);
+}
+
+int main()
+{
+    int H, A;
+    scanf("%d %d", &H, &A);
+
+    attack(H, A);
+
+    return 0;
+}
