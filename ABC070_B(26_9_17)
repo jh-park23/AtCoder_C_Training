@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void both_hold(const int A, const int B, const int C, const int D)
+{
+    if(B <= C || D <= A)
+    {
+        printf("0\n");
+    }
+    else if(A < C  && B > C && B <= D)
+    {
+        printf("%d\n", B - C);
+    }
+    else if(A <= C && B >= D)
+    {
+        printf("%d\n", D - C);
+    }
+    else if(A > C && D > A && D <= B)
+    {
+        printf("%d\n", D - A);
+    }
+    else if(C <= A && D >= B)
+    {
+        printf("%d\n", B - A);
+    }
+
+}
+
+int main()
+{
+    int A, B, C, D;
+    scanf("%d %d %d %d", &A, &B, &C, &D);
+
+    both_hold(A, B, C, D);
+
+    return 0;
+}
