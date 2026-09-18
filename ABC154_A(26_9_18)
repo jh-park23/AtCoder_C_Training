@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+void check_string(const char *S, const char *T, int A, int B, const char *U)
+{
+    if(*U == *S)
+    {
+        A--;
+    }
+    else if(*U == *T)
+    {
+        B--;
+    }
+
+    printf("%d %d", A, B);
+}
+
+int main()
+{
+    char S[11], T[11], U[11];
+    int A, B;
+
+    scanf("%s %s", S, T);
+    scanf("%d %d", &A, &B);
+
+    scanf("%s", U);
+
+    check_string(S, T, A, B, U);
+
+    return 0;
+}
