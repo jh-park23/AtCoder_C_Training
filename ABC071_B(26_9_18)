@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+
+void find_small(const char *S)
+{
+    int len = strlen(S);
+    for(char small = 'a'; small <= 'z'; small++)
+    {
+        int exist = 0;
+
+        for(int i = 0; i < len; i++)
+        {
+            
+            if(small == S[i])
+            {
+                exist = 1;
+                break;
+            }
+        }
+        if(exist == 0)
+        {
+            printf("%c\n", small);
+            return;
+        }
+    }
+
+    
+    
+    printf("None\n");
+}
+
+int main()
+{
+    char S[100001];
+    scanf("%s", S);
+
+    find_small(S);
+
+    return 0;
+}
