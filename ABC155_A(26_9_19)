@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void check_num(const int A, const int B, const int C)
+{
+    if(A == B && A== C)
+    {
+        printf("No\n");
+    }
+    else if(A != B && A != C && B!=C)
+    {
+        printf("No\n");
+    }
+    else
+    {
+        printf("Yes\n");
+    }
+}
+
+int main()
+{
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+
+    check_num(A, B, C);
+
+    return 0;
+}
