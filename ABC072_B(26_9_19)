@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+
+
+void odd_string(const char *S)
+{
+    char result[50001];
+    int len = strlen(S), idx = 0;
+
+    for(int i = 0; i < len; i++)
+    {
+        if(i % 2 == 0)
+        {
+            result[idx] = S[i];
+            idx++;
+        }
+    }
+    result[idx] = '\0';
+
+    printf("%s\n", result);
+}
+
+int main()
+{
+    char S[100001];
+    scanf("%s", S);
+
+    odd_string(S);
+
+    return 0;
+}
