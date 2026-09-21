@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void check_rating(const int N, const int R)
+{
+    if(N >=10)
+    {
+        printf("%d\n", R);
+    }
+    else
+    {
+        printf("%d\n", R + (100 * (10-N)));
+    }
+}
+
+int main()
+{
+    int N, R;
+    scanf("%d %d", &N, &R);
+
+    check_rating(N, R);
+
+    return 0;
+}
