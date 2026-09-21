@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+void num_people(const int N, const int G[][3])
+{
+    int sum = 0;
+
+    for(int i = 0; i < N; i++)
+    {
+        int group_people = G[i][1] - G[i][0] + 1;
+        sum += group_people;
+    }
+
+    printf("%d\n", sum);
+}
+
+int main()
+{
+    int N;
+    int G[1001][3];
+    
+    scanf("%d", &N);
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d %d", &G[i][0], &G[i][1]);
+    }
+
+    num_people(N, G);
+
+    return 0;
+}
