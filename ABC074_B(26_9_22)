@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void smallest_dis(const int N, const int K, const int *X)
+{
+    int sum_smallest_dis = 0;
+    
+    for(int i = 0; i < N; i++)
+    {
+        int dis_total_A = abs(X[i] - 0), dis_total_B = abs(X[i] - K);
+        if(dis_total_A <= dis_total_B)
+        {
+            sum_smallest_dis += dis_total_A * 2; 
+        }
+        else
+        {
+            sum_smallest_dis += dis_total_B * 2;
+        }
+    }
+
+    printf("%d\n", sum_smallest_dis);
+}
+
+int main()
+{
+    int N, K;
+    scanf("%d %d", &N, &K);
+
+    int X[101];
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &X[i]);
+    }
+
+    smallest_dis(N, K, X);
+
+    return 0;
+}
