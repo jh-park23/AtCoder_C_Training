@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void count_paper(const int N)
+{
+    if(N % 2 == 0)
+    {
+        printf("%d\n", N / 2);
+    }
+    else
+    {
+        printf("%d\n", (N+1) / 2);
+    }
+}
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    count_paper(N);
+
+    return 0;
+}
