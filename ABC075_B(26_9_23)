@@ -1,0 +1,56 @@
+#include<stdio.h>
+
+void count_bomb(const int H, const int W, const char S[][51])
+{
+    char result[51][51];
+
+    for(int i = 0; i < H; i++)
+    {
+        for(int j = 0; j< W; j++)
+        {
+            if(S[i][j] == '#')
+            {
+                result[i][j] = '#';
+                continue;
+            }
+
+            int bomb = 0;
+
+            for(int m = i - 1; m <= i + 1; m++)
+            {
+                for(int n = j - 1; n <= j+1; n++)
+                {
+                    if(m>= 0 && m < H && n >= 0 && n < W)
+                    if(S[m][n] == '#')
+                    {
+                        bomb++;
+                    }
+                }
+            }
+            result[i][j] = bomb + '0';
+        }
+
+        result[i][W] = '\0';
+    }
+
+    for(int i = 0; i < H; i++)
+    {
+        printf("%s\n", result[i]);
+    }
+}
+
+int main()
+{
+    int H, W;
+    scanf("%d %d", &H, &W);
+    char S[51][51];
+
+    for(int i = 0; i < H; i++)
+    {
+        scanf("%s", S[i]);
+    }
+
+    count_bomb(H, W, S);
+
+    return 0;
+}
