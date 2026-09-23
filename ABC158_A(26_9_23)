@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+void check_connect(const char *S)
+{
+    char station = S[0];
+    int connect = 0;
+    for(int i = 1; i < 3; i++)
+    {
+        if(S[i] != station)
+        {
+            connect = 1;
+            break;
+        }
+    }
+
+    if(connect == 1)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
+}
+
+int main()
+{
+    char S[4];
+    scanf("%s", &S);
+
+    check_connect(S);
+
+    return 0;
+}
