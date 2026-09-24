@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+void display_result(const int N, const int K)
+{
+    int result = 1;
+
+    for(int i = 0; i < N; i++)
+    {
+        if(result*2 >= result + K)
+        {
+            result += K;
+        }
+        else
+        {
+            result *= 2;
+        }
+    }
+
+    printf("%d\n", result);
+}
+
+int main()
+{
+    int N, K;
+    scanf("%d %d", &N, &K);
+
+    display_result(N, K);
+
+    return 0;
+}
