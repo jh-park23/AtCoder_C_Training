@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void count_possible_people(const long long X,const long long Y,const long long Z)
+{
+    int people = 0;
+    while(1)
+    {
+        if(X >= (Y * people) + ((people + 1) * Z))
+        {
+            people++;
+        }
+        else break; 
+    }
+
+    printf("%lld\n", people - 1);
+}
+
+int main()
+{
+    long long X, Y, Z;
+    scanf("%lld %lld %lld", &X, &Y, &Z);
+
+    count_possible_people(X, Y, Z);
+
+    return 0;
+}
+
