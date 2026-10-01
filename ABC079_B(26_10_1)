@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void find_lucasnum(const int N)
+{
+    long long Li1 = 1, Li2= 2; 
+    long long Ln;
+
+    for(int i = 0; i < N-1; i++)
+    {
+        Ln = Li1 + Li2;       
+        Li2 = Li1;
+        Li1 = Ln;   
+    }
+
+    printf("%lld\n", Ln);
+}
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    find_lucasnum(N);
+
+    return 0;
+}
