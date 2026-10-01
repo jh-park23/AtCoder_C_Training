@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+void find_7(const char *N)
+{
+    int found = 0;
+
+    for(int i = 0; i < 3; i++)
+    {
+        if(N[i] == '7')
+        {
+            found = 1;
+        }
+    }
+
+    if(found == 1)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
+}
+
+int main()
+{
+    char N[4];
+    scanf("%s", N);
+
+    find_7(N);
+
+    return 0;
+}
