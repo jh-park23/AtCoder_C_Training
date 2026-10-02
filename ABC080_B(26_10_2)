@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+
+void divisible(const char *N)
+{
+    int sum = 0, len = strlen(N);
+    long long total = 0;
+    for(int i = 0; i < len; i++)
+    {
+        sum += N[i] - '0';
+    }
+ 
+    for(int j = 0; j < len; j++)
+    {
+        total += N[j] - '0';
+        total *= 10;
+    }
+
+    total /= 10;
+
+    if(total % sum == 0)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No");
+    }
+}
+
+int main()
+{
+    char N[9];
+    scanf("%s", N);    
+
+    divisible(N);
+
+    return 0;
+}
