@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void try_attack(const int S, const int W)
+{
+    if(S > W)
+    {
+        printf("safe");
+    }
+    else
+    {
+        printf("unsafe");
+    }
+}
+
+int main()
+{
+    int S, W;
+    scanf("%d %d", &S, &W);
+
+    try_attack(S, W);
+
+    return 0;
+}
