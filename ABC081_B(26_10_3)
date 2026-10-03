@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+void count_divide(const int N, int A[201])
+{
+    int odd = 0, count = 0;
+    while(1)
+    {
+        for(int i = 0; i < N; i++)
+        {
+            if(A[i] % 2 == 1)
+            {
+                odd = 1;
+            }
+        }
+
+        if(odd == 0)
+        {
+            for(int i = 0; i < N; i++)
+            {
+                A[i] = A[i] / 2;
+            }
+            count++;
+        }
+        else break;
+    }
+
+    printf("%d", count);
+}
+
+int main()
+{
+    int N, A[201];
+    scanf("%d", &N);
+
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &A[i]);
+    }
+
+    count_divide(N, A);
+
+    return 0;
+}
