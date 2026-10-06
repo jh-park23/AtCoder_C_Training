@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<string.h>
+
+void rearr(char *s, char *t)
+{
+    char alphas[27]={0}, alphat[27]={0};
+    int lengths = strlen(s), lengtht = strlen(t);
+
+    for(int i = 0; i <lengths; i++)
+    {
+        int idx_s = s[i] - 'a';
+        alphas[idx_s]++;
+    }
+   
+    for(int i = 0; i <lengtht; i++)
+    {
+        int idx_t = t[i] - 'a';
+        alphat[idx_t]++;
+    }
+
+    int idx = 0;
+    for(int i = 0; i < 26; i++)
+    {
+        while(alphas[i] > 0)
+        {
+            s[idx] = i + 'a';
+            idx++;
+            alphas[i]--;
+        }   
+    }
+    s[idx] = '\0';
+
+    idx = 0;
+    for(int i = 25; i >= 0; i--)
+    {
+        while(alphat[i] > 0)
+        {
+            t[idx] = i + 'a';
+            idx++;
+            alphat[i]--;
+        }   
+    }
+    t[idx] = '\0';
+
+    if(strcmp(s,t) < 0)
+    {
+        printf("Yes\n");
+    }
+    else printf("No\n");
+}
+
+int main()
+{
+    char s[101], t[101];
+    scanf("%s %s", s, t);
+
+    rearr(s,t);
+
+    return 0;
+}
