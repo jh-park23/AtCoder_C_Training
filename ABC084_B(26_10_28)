@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<string.h>
+
+void check_code(const int A, const int B, const char *S)
+{
+    int length = strlen(S), check = 0;
+    
+    for(int i = 0; i < length; i++)
+    {
+        if(i < A)
+        {
+            if(S[i] < '0' || S[i] > '9')
+            {
+                check = 1;
+                break;
+            }
+        }
+        else if(i == A)
+        {
+            if(S[i] != '-')
+            {
+                check = 1;
+                break;
+            }
+        }
+        else if(i > A && i < length)
+        {
+            if(S[i] < '0' || S[i] > '9')
+            {
+                check = 1;
+                break;
+            }
+        }
+    }
+
+    if(check == 0)
+    {
+        printf("Yes");
+    }
+    else
+    {
+        printf("No");
+    }
+}
+
+int main()
+{
+    int A, B;
+    char S[11];
+    scanf("%d %d", &A, &B);
+    scanf("%s", S);
+
+    check_code(A,B,S);
+
+    return 0;
+}
