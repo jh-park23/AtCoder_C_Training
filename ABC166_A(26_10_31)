@@ -1,12 +1,13 @@
 #include<stdio.h>
+#include<string.h>
 
 void this_week(const char *S)
 {
-    if(S == "ABC")
+    if(strcmp(S, "ABC") == 0)
     {
         printf("ARC");
     }
-    else if(S == "ARC")
+    else if(strcmp(S, "ARC") == 0)
     {
         printf("ABC");
     }
