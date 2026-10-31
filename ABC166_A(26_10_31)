@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void this_week(const char *S)
+{
+    if(S == "ABC")
+    {
+        printf("ARC");
+    }
+    else if(S == "ARC")
+    {
+        printf("ABC");
+    }
+}
+
+int main()
+{
+    char S[4];
+    scanf("%s", S);
+
+    this_week(S);
+
+    return 0;
+}
