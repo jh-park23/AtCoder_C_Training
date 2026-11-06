@@ -1,0 +1,58 @@
+#include<stdio.h>
+
+void color_num(const int N, const char *S)
+{
+    int yellow = 0, green = 0, white = 0, pink = 0;
+
+    for(int i = 0; i < N; i++)
+    {
+        if(S[i] == 'Y')
+        {
+            yellow++;
+        }
+        else if(S[i] == 'G')
+        {
+            green++;
+        }
+        else if(S[i] == 'W')
+        {
+            white++;
+        }
+        else if(S[i] == 'P')
+        {
+            pink++;
+        }
+
+        if(yellow != 0 && white != 0 && green != 0 && pink != 0)
+        {
+            break;
+        }
+    }
+
+    if(yellow != 0 && white != 0 && green != 0 && pink != 0)
+    {
+        printf("Four");
+    }
+    else
+    {
+        printf("Three");
+    }
+}
+
+
+int main()
+{
+    int N;
+    scanf("%d", &N);
+
+    char S[101];
+    for(int i = 0; i <N; i++)
+    {
+        scanf(" %c", &S[i]);
+    }
+    
+
+    color_num(N, S);
+
+    return 0;
+}
