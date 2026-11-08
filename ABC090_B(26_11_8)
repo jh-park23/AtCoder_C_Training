@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void num_palindromic(const int A, const int B)
+{
+    int count = 0;
+    
+    for(int i = A; i <= B; i++)
+    {
+        int temp = i;
+        int d1 = temp /10000;
+        int d2 = (temp / 1000) % 10;
+        int d4 = (temp / 10) % 10;
+        int d5 = temp % 10;
+
+        if(d1 == d5 && d2 == d4)
+        {
+            count++;
+        }
+    }
+
+    printf("%d", count);
+}
+
+int main()
+{
+    int A, B;
+    scanf("%d %d", &A, &B);
+
+    num_palindromic(A, B);
+
+    return 0;
+}
