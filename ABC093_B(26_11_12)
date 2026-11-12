@@ -1,0 +1,58 @@
+#include<stdio.h>
+
+void est_num(const int A, const int B, const int K)
+{
+    if((B-A+1) % 2 == 0)
+    {
+        if((B-A+1) / 2 > K)
+        {
+            for(int i = A; i < A + K; i++)
+            {
+                printf("%d\n", i);
+            }
+            for(int i = (B-K+1); i <= B; i++)
+            {
+                printf("%d\n", i);
+            }
+        }
+        else
+        {
+            for(int i = A; i <=B; i++)
+            {
+                printf("%d\n", i);
+            }
+        }
+    }
+    else
+    {
+        if((B-A+2) / 2 > K)
+        {
+            for(int i = A; i < A + K; i++)
+            {
+                printf("%d\n", i);
+            }
+            for(int i = B-K+1; i <= B; i++)
+            {
+                printf("%d\n", i);
+            }
+        }
+        else
+        {
+            for(int i = A; i <=B; i++)
+            {
+                printf("%d\n", i);
+            }
+        }
+        
+    }
+}
+
+int main()
+{
+    int A, B, K;
+    scanf("%d %d %d", &A, &B, &K);
+
+    est_num(A, B, K);
+
+    return 0;
+}
