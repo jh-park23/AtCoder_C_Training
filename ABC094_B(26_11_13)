@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+void count_cost(const int N, const int M, const int X, const int *A)
+{
+    int idx = X;
+    int toll_0 = 0, toll_N = 0;
+
+    for(int i = 0; i < M; i++)
+    {
+        if(A[i] > X)
+        {
+            toll_N++;
+        }
+        else if(A[i] < X)
+        {
+            toll_0++;
+        }
+    }
+
+    if(toll_0 >= toll_N)
+    {
+        printf("%d\n", toll_N);
+    }
+    else
+    {
+        printf("%d\n", toll_0);
+    }
+
+}
+
+int main()
+{
+    int N, M, X, A[101];
+    scanf("%d %d %d", &N, &M, &X);
+
+    for(int i = 0; i < M; i++)
+    {
+        scanf("%d", &A[i]);
+    }
+
+    count_cost(N, M, X, A);
+
+    return 0;
+}
