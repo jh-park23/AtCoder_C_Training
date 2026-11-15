@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void num_doughnut(const int N, const int X, const int *m)
+{
+    int smallest_gram = 1001, total_num = N, remain = X;
+
+    for(int i = 0; i < N; i++)
+    {
+        if(m[i] < smallest_gram)
+        {
+            smallest_gram = m[i];
+        }
+
+        remain -= m[i];        
+    }
+
+    total_num += remain / smallest_gram;
+
+    printf("%d\n", total_num);
+}
+
+int main()
+{
+    int N, X;
+    int m[100];
+
+    scanf("%d %d", &N, &X);
+    for(int i = 0; i < N; i++)
+    {
+        scanf("%d", &m[i]);
+    }
+
+    num_doughnut(N, X, m);
+
+    return 0;
+}
