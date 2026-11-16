@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+void find_max(int A, int B, int C, const int K)
+{
+    for(int i = 0; i < K; i++)
+    {
+        if(A >= B && A >= C)
+        {
+            A *= 2;
+        }
+        else if(B >= A && B >= C)
+        {
+            B *= 2;
+        }
+        else if(C >= A && C >= B)
+        {
+            C *= 2;
+        }
+    }
+
+    printf("%d\n", A+B+C);
+}
+
+int main()
+{
+    int A, B, C, K;
+    scanf("%d %d %d", &A, &B, &C);
+    scanf("%d", &K);
+
+    find_max(A,B, C, K);
+
+    return 0;
+}
