@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+void find_point(const int N, const char *S)
+{
+    int X[101][27]= {0}, Y[101][27] ={0};
+
+    for(int i = 0; i < N; i++)
+    {
+        int idx_1 = 0, idx_2 =0;
+        for(int j = 0; j <= i; j++)
+        {
+            idx_1 = S[j] - 'a';
+            X[i][idx_1]++;
+        }
+        for(int z = i+1; z < N; z++)
+        {
+            idx_2 = S[z] - 'a';
+            Y[i][idx_2]++;
+        }
+    }
+    int count_max = 0;
+    for(int i = 0; i < N; i++)
+    {
+        int count = 0;
+        for(int j = 0; j < 26; j++)
+        {
+            if(X[i][j] && Y[i][j])
+            {
+                count++;
+            }
+            
+        }
+
+        if(count > count_max)
+        {
+            count_max = count;
+        }
+    }
+
+    printf("%d\n", count_max);
+}
+
+int main()
+{
+    int N;
+    char S[101];
+    scanf("%d", &N);
+    scanf("%s", S);
+
+    find_point(N, S);
+
+    return 0;
+}
