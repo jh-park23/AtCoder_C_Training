@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+void find_Nth(const int D, const int N)
+{
+    int D_times = 1, count = N;
+    
+    
+    if(D == 2)
+    {
+        D_times = 10000;
+    }
+    else if(D == 1)
+    {
+        D_times = 100;
+    }
+    
+
+    if(N == 100) count = 101;
+    
+    printf("%d\n", count*D_times);
+}
+
+int main()
+{
+    int D, N;
+    scanf("%d %d", &D, &N);
+
+    find_Nth(D, N);
+
+    return 0;
+}
